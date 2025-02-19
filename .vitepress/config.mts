@@ -4,6 +4,9 @@ import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 export default defineConfig({
   title: "Kirara AI",
   description: "大模型 Agent 编排引擎官方文档",
+  ignoreDeadLinks: [
+    './LICENSE',
+  ],
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/' },
