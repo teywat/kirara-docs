@@ -142,13 +142,15 @@
     接下来，你需要下载并解压 WebUI。  
     前往 [chatgpt-for-bot-webui Release 页面](https://github.com/DarkSkyTeam/chatgpt-for-bot-webui/releases) 下载最新版本的 `dist.zip`，并解压到 `web` 目录。
     ```bash
-    unzip dist.zip -d web
+    unzip dist.zip -d /tmp/web_dist
+    mkdir web
+    mv /tmp/web_dist/dist/* web/
     ```
 
 4.  **启动 Kirara AI：**  
     执行以下命令启动 Kirara AI：
     ```bash
-    python3 main.py
+    python3 -m kirara_ai
     ```
 
 5.  **启动 WebUI：**  
