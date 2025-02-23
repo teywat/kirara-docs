@@ -30,19 +30,14 @@
     首先，前往 [Release 页面](https://github.com/lss233/chatgpt-mirai-qq-bot/releases) 下载最新版本的 `quickstart-windows-kirara-ai-amd64.zip` 文件。  
     下载完成后，将压缩包解压到你想要安装 Kirara AI 的目录。
 
-2.  **初始化 Kirara AI：**  
-    接下来，双击运行解压后的 `初始化.cmd` 文件。  
-    按照提示操作，即可完成 Kirara AI 的初始化配置。
+2.  **启动 Kirara AI：**  
+    进入解压后的目录，双击 `启动.cmd` 文件，就可以启动 Kirara AI 啦！
 
-3.  **启动 Kirara AI：**  
-    初始化完成后，你的项目目录下会出现一个 `启动.cmd` 文件。  
-    双击运行它，就可以启动 Kirara AI 啦！
+3.  **访问 WebUI：**  
+    当你看见 `WebUI 地址：http://127.0.0.1:8080` 字样时，说明你的 Kirara AI 已经成功启动了！  
+    现在，打开你的浏览器，访问 `http://127.0.0.1:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
 
-4.  **访问 WebUI：**  
-    当你看见 `WebUI 地址：http://localhost:8080` 字样时，说明你的 Kirara AI 已经成功启动了！  
-    现在，打开你的浏览器，访问 `http://localhost:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
-
-5.  **下一步：**  
+4.  **下一步：**  
     恭喜你，已经成功启动 Kirara AI！  
     接下来，你可以开始配置消息平台和大语言模型了，让你的 AI 助手真正开始工作！
 
@@ -107,7 +102,7 @@
 
 5.  **启动 WebUI：**  
     启动完成后，你的 Kirara AI 应该已经成功启动了！  
-    打开浏览器，访问 `http://localhost:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
+    打开浏览器，访问 `http://127.0.0.1:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
 
 6.  **下一步：**  
     恭喜你，已经成功启动 Kirara AI！  
@@ -139,7 +134,7 @@
 2.  **安装依赖：**  
     进入 Kirara AI 的源码目录，执行以下命令安装依赖：
     ```bash
-    pip3 install -r requirements.txt
+    pip3 install -e .
     ```
     这个命令会安装 Kirara AI 运行所需的所有 Python 依赖。
 
@@ -158,7 +153,7 @@
 
 5.  **启动 WebUI：**  
     启动完成后，你的 Kirara AI 应该已经成功启动了！  
-    打开浏览器，访问 `http://localhost:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
+    打开浏览器，访问 `http://127.0.0.1:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
 
 6.  **下一步：**  
     恭喜你，已经成功启动 Kirara AI！  
