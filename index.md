@@ -12,7 +12,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: GitHub
-      link: https://github.com/lss233/chatgpt-mirai-qq-bot/
+      link: https://github.com/lss233/kirara-ai/
 
 features:
   - title: 原生支持聊天平台

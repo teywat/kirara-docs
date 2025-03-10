@@ -27,7 +27,7 @@
 本教程适用于 Windows 平台。
 
 1.  **下载部署包：**  
-    首先，前往 [Release 页面](https://github.com/lss233/chatgpt-mirai-qq-bot/releases) 下载最新版本的 `quickstart-windows-kirara-ai-amd64.zip` 文件。  
+    首先，前往 [Release 页面](https://github.com/lss233/kirara-ai/releases) 下载最新版本的 `quickstart-windows-kirara-ai-amd64.zip` 文件。  
     下载完成后，将压缩包解压到你想要安装 Kirara AI 的目录。
 
 2.  **启动 Kirara AI：**  
@@ -36,7 +36,7 @@
 3.  **访问 WebUI：**
     当你看见 `WebUI 管理平台本地访问地址：http://127.0.0.1:8080` 字样时，说明你的 Kirara AI 已经成功启动了！
 
-     [image](https://github.com/user-attachments/assets/2fc30952-30fc-44da-b96e-a4f3db576e7c)
+     ![image](https://github.com/user-attachments/assets/2fc30952-30fc-44da-b96e-a4f3db576e7c)
     
     现在，打开你的浏览器，访问 `http://127.0.0.1:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
 
@@ -128,11 +128,11 @@
     *   **使用 Git:**  
         打开你的终端，执行以下命令：
         ```bash
-        git clone https://github.com/lss233/chatgpt-mirai-qq-bot
-        cd chatgpt-mirai-qq-bot
+        git clone https://github.com/lss233/kirara-ai
+        cd kirara-ai
         ```
     *   **下载压缩包:**  
-        前往 [Release 页面](https://github.com/lss233/chatgpt-mirai-qq-bot/releases) 下载最新版本的源码压缩包，并解压到你想要安装 Kirara AI 的目录。
+        前往 [Release 页面](https://github.com/lss233/kirara-ai/releases) 下载最新版本的源码压缩包，并解压到你想要安装 Kirara AI 的目录。
 
 2.  **安装依赖：**  
     进入 Kirara AI 的源码目录，执行以下命令安装依赖：
@@ -143,7 +143,7 @@
 
 3.  **下载并解压 WebUI (必须):**  
     接下来，你需要下载并解压 WebUI。  
-    前往 [chatgpt-for-bot-webui Release 页面](https://github.com/DarkSkyTeam/chatgpt-for-bot-webui/releases) 下载最新版本的 `dist.zip`，并解压到 `web` 目录。
+    前往 [Kirara WebUI Release 页面](https://github.com/DarkSkyTeam/kirara-webui/releases) 下载最新版本的 `dist.zip`，并解压到 `web` 目录。
     ```bash
     unzip dist.zip -d /tmp/web_dist
     mkdir web

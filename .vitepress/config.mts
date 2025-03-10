@@ -10,7 +10,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/' },
-      { text: 'GitHub', link: 'https://github.com/lss233/chatgpt-mirai-qq-bot/' }
+      { text: 'GitHub', link: 'https://github.com/lss233/kirara-ai/' }
     ],
 
     sidebar: {
@@ -66,7 +66,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/lss233/chatgpt-mirai-qq-bot/' }
+      { icon: 'github', link: 'https://github.com/lss233/kirara-ai/' }
     ]
   },
   markdown: {

@@ -61,8 +61,8 @@ yarn build
 
 ## 社区资源
 
-- [GitHub 仓库](https://github.com/lss233/chatgpt-mirai-qq-bot/)
-- [问题反馈](https://github.com/lss233/chatgpt-mirai-qq-bot/issues)
+- [GitHub 仓库](https://github.com/lss233/kirara-ai/)
+- [问题反馈](https://github.com/lss233/kirara-ai/issues)
 - [插件市场](https://kirara-plugin.app.lss233.com/)
 
 ## 许可证

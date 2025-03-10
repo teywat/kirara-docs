@@ -13,7 +13,7 @@
 本教程适用于使用 Windows 快速部署包的用户。
 
 1.  **下载最新版本：**  
-    前往 [Release 页面](https://github.com/lss233/chatgpt-mirai-qq-bot/releases) 下载最新版本的 `quickstart-windows-kirara-ai-amd64.zip` 文件。
+    前往 [Release 页面](https://github.com/lss233/kirara-ai/releases) 下载最新版本的 `quickstart-windows-kirara-ai-amd64.zip` 文件。
 
 2.  **解压部署包：**  
     将压缩包解压到你想要安装 Kirara AI 的目录。
@@ -58,12 +58,12 @@
     ```bash
     git pull
     ```
-    如果你没有使用 Git，可以前往 [Release 页面](https://github.com/lss233/chatgpt-mirai-qq-bot/releases) 下载最新版本的源码压缩包，并解压到你想要安装 Kirara AI 的目录。
+    如果你没有使用 Git，可以前往 [Release 页面](https://github.com/lss233/kirara-ai/releases) 下载最新版本的源码压缩包，并解压到你想要安装 Kirara AI 的目录。
 
 2.  **安装依赖：**  
     执行以下命令安装或更新依赖：
     ```bash
-    pip3 install -r requirements.txt --upgrade
+    pip install -e <Kirara AI 目录>
     ```
 
 3.  **迁移数据：**  
@@ -72,7 +72,7 @@
 4.  **启动 Kirara AI：**  
     执行以下命令启动 Kirara AI：
     ```bash
-    python3 main.py
+    python -m kirara_ai
     ```
 
 :::

@@ -11,6 +11,6 @@ Kirara AI 是一个强大的大模型 Agent 编排引擎，它能够帮助你快
 
 ## 社区资源
 
-- [GitHub 仓库](https://github.com/lss233/chatgpt-mirai-qq-bot/)
-- [问题反馈](https://github.com/lss233/chatgpt-mirai-qq-bot/issues)
+- [GitHub 仓库](https://github.com/lss233/kirara-ai/)
+- [问题反馈](https://github.com/lss233/kirara-ai/issues)
 - [插件市场](https://kirara-plugin.app.lss233.com/)

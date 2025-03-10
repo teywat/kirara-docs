@@ -10,8 +10,8 @@
 
 在此期间，你可以：
 
-1. 查看 [GitHub 仓库](https://github.com/lss233/chatgpt-mirai-qq-bot/) 获取最新信息
-2. 加入我们的社区获取帮助, QQ 群号请见 [README](https://github.com/lss233/chatgpt-mirai-qq-bot/blob/main/README.md)。
+1. 查看 [GitHub 仓库](https://github.com/lss233/kirara-ai/) 获取最新信息
+2. 加入我们的社区获取帮助, QQ 群号请见 [README](https://github.com/lss233/kirara-ai/blob/main/README.md)。
 
 ## 参与贡献
 
