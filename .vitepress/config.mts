@@ -31,6 +31,7 @@ export default defineConfig({
             { text: '选择调用时机', link: '/guide/configuration/dispatch' },
             { text: '插件管理', link: '/guide/configuration/plugins' },
             { text: '更新 Kirara AI', link: '/guide/configuration/update' },
+            { text: 'Nginx 配置', link: '/guide/configuration/nginx' },
           ]
         },
         {
