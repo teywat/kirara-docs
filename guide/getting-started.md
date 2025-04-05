@@ -10,13 +10,18 @@
     **优点：** 步骤最少，操作简单，无需配置环境，适合 Windows 新手用户。  
     **建议：** 如果你是 Windows 新手，或者希望快速体验 Kirara AI，建议选择此方法。
 
+*   **Python 部署：**  
+    **优点：** 简单易用，支持自动更新，无需访问 GitHub，跨平台兼容性好。  
+    **建议：** 如果你已经安装了 Python，或者希望方便地管理和更新 Kirara AI，建议选择此方法。
+
 *   **Docker Compose 部署：**  
     **优点：** 部署简单，易于管理，支持自动更新，跨平台兼容性好，适合 Linux 用户。  
-    **建议：** 如果你是 Linux 用户，或者希望方便地管理和更新 Kirara AI，建议选择此方法。
+    **建议：** 如果你是 Linux 用户，希望方便地管理和更新 Kirara AI，建议选择此方法。
 
 *   **源码部署：**  
     **优点：** 适合不喜欢使用 Docker 的用户，或者想要在项目基础上进行二次开发的用户。  
     **建议：** 使用此方法的用户需要有一定的 Python 基础，希望你知道自己在做什么。
+
 
 选择好部署方法后，就可以开始啦！
 
@@ -41,6 +46,51 @@
     现在，打开你的浏览器，访问 `http://127.0.0.1:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
 
 5.  **下一步：**  
+    恭喜你，已经成功启动 Kirara AI！  
+    接下来，你可以开始配置消息平台和大语言模型了，让你的 AI 助手真正开始工作！
+
+=== Python 部署
+
+本教程适用于所有安装了 Python 的平台，是最推荐的部署方式之一。
+
+**系统要求：**
+
+- Python 3.12 或更高版本（可以通过 `python -V` 命令来确认）
+
+1.  **创建虚拟环境：**  
+    首先，创建一个虚拟环境来隔离 Kirara AI 的依赖，避免与系统其他 Python 环境冲突：
+    ```bash
+    python -m venv venv
+    ```
+
+2.  **激活虚拟环境：**  
+    * Windows:
+    ```bash
+    venv\Scripts\activate
+    ```
+    * Linux/macOS:
+    ```bash
+    source venv/bin/activate
+    ```
+
+3.  **安装 Kirara AI：**  
+    使用 pip 安装 Kirara AI：
+    ```bash
+    pip install kirara-ai
+    ```
+    这个命令会安装 Kirara AI 及其所有依赖，并且支持自动更新。
+
+4.  **启动 Kirara AI：**  
+    执行以下命令启动 Kirara AI：
+    ```bash
+    python -m kirara_ai
+    ```
+
+5.  **访问 WebUI：**  
+    启动完成后，你的 Kirara AI 应该已经成功启动了！  
+    打开浏览器，访问 `http://127.0.0.1:8080`，即可进入 WebUI 界面。
+
+6.  **下一步：**  
     恭喜你，已经成功启动 Kirara AI！  
     接下来，你可以开始配置消息平台和大语言模型了，让你的 AI 助手真正开始工作！
 
@@ -117,7 +167,7 @@
 
 **系统要求：**
 
--   Python 3.9 或更高版本
+-   Python 3.12 或更高版本
 -   Git（可选，用于获取最新代码）
 -   稳定的网络连接
 
@@ -141,31 +191,31 @@
     ```
     这个命令会安装 Kirara AI 运行所需的所有 Python 依赖。
 
-3.  **下载并解压 WebUI (必须):**  
-    接下来，你需要下载并解压 WebUI。  
-    前往 [Kirara WebUI Release 页面](https://github.com/DarkSkyTeam/kirara-webui/releases) 下载最新版本的 `dist.zip`，并解压到 `web` 目录。
-    ```bash
-    unzip dist.zip -d /tmp/web_dist
-    mkdir web
-    mv /tmp/web_dist/dist/* web/
-    ```
-
-4.  **启动 Kirara AI：**  
+3.  **启动 Kirara AI：**  
     执行以下命令启动 Kirara AI：
     ```bash
     python3 -m kirara_ai
     ```
 
-5.  **启动 WebUI：**  
+4.  **访问 WebUI：**  
     启动完成后，你的 Kirara AI 应该已经成功启动了！  
-    打开浏览器，访问 `http://127.0.0.1:8080` (如果修改了端口，请使用你修改后的端口)，即可进入 WebUI 界面。
+    打开浏览器，访问 `http://127.0.0.1:8080`，即可进入 WebUI 界面。
 
-6.  **下一步：**  
+5.  **下一步：**  
     恭喜你，已经成功启动 Kirara AI！  
     接下来，你可以开始配置消息平台和大语言模型了，让你的 AI 助手真正开始工作！
 
 :::
 
+## 自定义监听地址和端口
+
+WebUI 默认监听在 `127.0.0.1:8080`，如果你需要修改监听的地址或端口，可以在启动命令后添加参数：
+
+```bash
+python -m kirara_ai -H 0.0.0.0 -p 8888
+```
+
+这将使 WebUI 监听在所有网络接口的 8888 端口上。
 
 ## 下一步
 
