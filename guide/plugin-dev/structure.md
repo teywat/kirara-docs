@@ -8,12 +8,16 @@
 
 ```
 my-plugin/
-├── __init__.py          # 插件入口
-├── plugin.yaml          # 插件配置
-├── handler.py           # 消息处理器
-├── requirements.txt     # 依赖项
-├── README.md           # 文档
-└── assets/             # 资源文件
+├── assets                # 一些非代码类的资源文件
+├── LICENSE               # 你所选取的证书
+├── plugin.yaml           # 插件配置       
+├── README.md             # 插件说明文档
+├── setup.py              # python 包管理器
+└── src/                  # 插件源代码文件夹
+    ├── __init__.py       # 插件入口
+    ├── mcp_client.py     # 以下三个为处理逻辑文件，以你自己的为主
+    ├── model.py
+    └── workflow.py
 ```
 
 ## 配置文件
@@ -57,8 +61,7 @@ config:
 插件的入口文件。
 
 ```python
-from kirara.plugin import Plugin
-from kirara.message import Message
+from kirara_ai.plugin_manager.plugin import Plugin
 
 class MyPlugin(Plugin):
     def __init__(self):
@@ -66,37 +69,15 @@ class MyPlugin(Plugin):
         self.name = "my-plugin"
         self.version = "1.0.0"
         
-    async def initialize(self):
-        """插件初始化"""
-        self.api_key = self.config.get("api_key")
-        self.max_retries = self.config.get("max_retries", 3)
-        
-    async def handle_message(self, message: Message):
-        """处理消息"""
+    def on_load(self):
+        # 插件加载时执行方法
         pass
-```
-
-## 消息处理器
-
-### handler.py
-
-处理具体消息的逻辑。
-
-```python
-from kirara.message import Message
-from kirara.plugin import handler
-
-class MessageHandler:
-    @handler.command("hello")
-    async def handle_hello(self, message: Message):
-        """处理 /hello 命令"""
-        await message.reply("Hello, world!")
-    
-    @handler.regex(r"^/echo\s+(.+)$")
-    async def handle_echo(self, message: Message, match):
-        """处理 /echo 命令"""
-        text = match.group(1)
-        await message.reply(f"Echo: {text}")
+    def on_start(self):
+        # 插件被启用时执行方法
+        pass
+    def on_stop(self):
+        # 插件被禁用时执行方法
+        pass
 ```
 
 ## 依赖管理
@@ -116,6 +97,12 @@ python-dateutil>=2.8.2
 ### README.md
 
 插件的说明文档。
+
+> [!TIP]
+>
+> 为了方便他人，建议在`readme.md` 详细介绍插件
+
+
 
 ```markdown
 # My Plugin
@@ -162,22 +149,31 @@ assets/
 
 完整的插件目录结构示例：
 
+> [!NOTE]
+>
+> 为了保持主项目的健壮性，要求插件必须实现`pytest`验证功能。
+
 ```
 my-plugin/
-├── __init__.py
 ├── plugin.yaml
-├── handler.py
 ├── requirements.txt
+├── LICENSE
 ├── README.md
-├── utils/
-│   ├── __init__.py
-│   ├── api.py
-│   └── helpers.py
-├── models/
-│   ├── __init__.py
-│   └── data.py
-├── templates/
-│   └── response.txt
+├── setup.py
+└── src/
+│    ├── __init__.py
+│    ├── handler.py
+│    ├── utils/
+│    │   ├── __init__.py
+│    │   ├── api.py
+│    │   └── helpers.py
+│    ├── models/
+│    │   ├── __init__.py
+│    │   └── data.py
+│    ├── templates/
+│    │   └── response.txt
+├── test/               # pytest文件，为了不出现bug，最好实现这个功能
+│    └── test_hander.py
 └── assets/
     └── images/
         └── logo.png
@@ -204,3 +200,5 @@ my-plugin/
    - 合理组织资源
    - 控制文件大小
    - 使用相对路径 
+5. **良好的测试*
+   - 使用`pytest`编写测试

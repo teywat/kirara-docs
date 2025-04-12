@@ -53,7 +53,7 @@ async def test_api_call():
 
 ```python
 # test_message.py
-from kirara.testing import MessageMock
+from kirara_ai.testing import MessageMock
 
 def test_command_handler():
     message = MessageMock(
@@ -72,14 +72,22 @@ def test_command_handler():
 ```python
 # test_api.py
 from unittest.mock import Mock, patch
+# 假设你的插件中有个api类
+from my_plugin import Api
 
 def test_external_api():
-    with patch("my_plugin.api.call") as mock_api:
+    with patch("Api.call") as mock_api:
         mock_api.return_value = {"data": "test"}
         
         plugin = MyPlugin()
         result = plugin.process_api_response()
         assert result == "test"
+        
+# 装饰器版本
+@patch(Api, "call")
+def test_external_api(mock_api_call):
+    # 设定调用Api.call方法时，返回的值
+    mock_api_call.return_value = "hello world"
 ```
 
 ## 集成测试
